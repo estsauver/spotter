@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface HomepwnerViewController : UIViewController
+@interface HomepwnerViewController : UIViewController <CLLocationManagerDelegate>
+{
+    IBOutlet UILabel *latitudeLabel;
+    IBOutlet UILabel *longitudeLabel;
+    IBOutlet UILabel *timestampLabel;
+    IBOutlet MKMapView *lastNetwork;
+    NSNumber *lastReachabilityStatus;
+}
 
 @end

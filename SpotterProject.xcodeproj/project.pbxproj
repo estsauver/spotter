@@ -15,6 +15,19 @@
 		5FCEDEEE160775DA00D5498B /* HomepwnerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEDEED160775DA00D5498B /* HomepwnerAppDelegate.m */; };
 		5FCEDEF1160775DA00D5498B /* HomepwnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEDEF0160775DA00D5498B /* HomepwnerViewController.m */; };
 		5FCEDEF4160775DA00D5498B /* HomepwnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEDEF2160775DA00D5498B /* HomepwnerViewController.xib */; };
+		5FCEDEFB1607770900D5498B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDEFA1607770900D5498B /* Parse.framework */; };
+		5FCEDEFD1607775B00D5498B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDEFC1607775B00D5498B /* AudioToolbox.framework */; };
+		5FCEDEFF1607776600D5498B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDEFE1607776600D5498B /* CFNetwork.framework */; };
+		5FCEDF011607779300D5498B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDF001607779300D5498B /* libsqlite3.dylib */; };
+		5FCEDF031607779E00D5498B /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDF021607779E00D5498B /* libz.1.1.3.dylib */; };
+		5FCEDF05160777A500D5498B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDF04160777A500D5498B /* MobileCoreServices.framework */; };
+		5FCEDF07160777B900D5498B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDF06160777B900D5498B /* QuartzCore.framework */; };
+		5FCEDF09160777C100D5498B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDF08160777C100D5498B /* Security.framework */; };
+		5FCEDF0B160777C700D5498B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDF0A160777C700D5498B /* StoreKit.framework */; };
+		5FCEDF0D160777CF00D5498B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDF0C160777CF00D5498B /* SystemConfiguration.framework */; };
+		5FCEDF0F1607850F00D5498B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDF0E1607850F00D5498B /* MapKit.framework */; };
+		5FCEDF111607851600D5498B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDF101607851600D5498B /* CoreLocation.framework */; };
+		5FCEDF14160786D500D5498B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEDF13160786D500D5498B /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +44,20 @@
 		5FCEDEEF160775DA00D5498B /* HomepwnerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomepwnerViewController.h; sourceTree = "<group>"; };
 		5FCEDEF0160775DA00D5498B /* HomepwnerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomepwnerViewController.m; sourceTree = "<group>"; };
 		5FCEDEF3160775DA00D5498B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HomepwnerViewController.xib; sourceTree = "<group>"; };
+		5FCEDEFA1607770900D5498B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		5FCEDEFC1607775B00D5498B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5FCEDEFE1607776600D5498B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5FCEDF001607779300D5498B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		5FCEDF021607779E00D5498B /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		5FCEDF04160777A500D5498B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		5FCEDF06160777B900D5498B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5FCEDF08160777C100D5498B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5FCEDF0A160777C700D5498B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5FCEDF0C160777CF00D5498B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5FCEDF0E1607850F00D5498B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5FCEDF101607851600D5498B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5FCEDF12160786C800D5498B /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		5FCEDF13160786D500D5498B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,9 +65,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FCEDF111607851600D5498B /* CoreLocation.framework in Frameworks */,
+				5FCEDF0F1607850F00D5498B /* MapKit.framework in Frameworks */,
+				5FCEDF0D160777CF00D5498B /* SystemConfiguration.framework in Frameworks */,
+				5FCEDF0B160777C700D5498B /* StoreKit.framework in Frameworks */,
+				5FCEDF09160777C100D5498B /* Security.framework in Frameworks */,
+				5FCEDF07160777B900D5498B /* QuartzCore.framework in Frameworks */,
+				5FCEDF05160777A500D5498B /* MobileCoreServices.framework in Frameworks */,
+				5FCEDF031607779E00D5498B /* libz.1.1.3.dylib in Frameworks */,
+				5FCEDF011607779300D5498B /* libsqlite3.dylib in Frameworks */,
+				5FCEDEE2160775DA00D5498B /* CoreGraphics.framework in Frameworks */,
+				5FCEDEFF1607776600D5498B /* CFNetwork.framework in Frameworks */,
+				5FCEDEFD1607775B00D5498B /* AudioToolbox.framework in Frameworks */,
 				5FCEDEDE160775DA00D5498B /* UIKit.framework in Frameworks */,
 				5FCEDEE0160775DA00D5498B /* Foundation.framework in Frameworks */,
-				5FCEDEE2160775DA00D5498B /* CoreGraphics.framework in Frameworks */,
+				5FCEDEFB1607770900D5498B /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +89,8 @@
 		5FCEDECE160775DA00D5498B = {
 			isa = PBXGroup;
 			children = (
+				5FCEDF101607851600D5498B /* CoreLocation.framework */,
+				5FCEDF0E1607850F00D5498B /* MapKit.framework */,
 				5FCEDEE3160775DA00D5498B /* SpotterProject */,
 				5FCEDEDC160775DA00D5498B /* Frameworks */,
 				5FCEDEDA160775DA00D5498B /* Products */,
@@ -67,6 +108,16 @@
 		5FCEDEDC160775DA00D5498B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5FCEDF0C160777CF00D5498B /* SystemConfiguration.framework */,
+				5FCEDF0A160777C700D5498B /* StoreKit.framework */,
+				5FCEDF08160777C100D5498B /* Security.framework */,
+				5FCEDF06160777B900D5498B /* QuartzCore.framework */,
+				5FCEDF04160777A500D5498B /* MobileCoreServices.framework */,
+				5FCEDF021607779E00D5498B /* libz.1.1.3.dylib */,
+				5FCEDF001607779300D5498B /* libsqlite3.dylib */,
+				5FCEDEFE1607776600D5498B /* CFNetwork.framework */,
+				5FCEDEFC1607775B00D5498B /* AudioToolbox.framework */,
+				5FCEDEFA1607770900D5498B /* Parse.framework */,
 				5FCEDEDD160775DA00D5498B /* UIKit.framework */,
 				5FCEDEDF160775DA00D5498B /* Foundation.framework */,
 				5FCEDEE1160775DA00D5498B /* CoreGraphics.framework */,
@@ -77,6 +128,8 @@
 		5FCEDEE3160775DA00D5498B /* SpotterProject */ = {
 			isa = PBXGroup;
 			children = (
+				5FCEDF13160786D500D5498B /* Reachability.m */,
+				5FCEDF12160786C800D5498B /* Reachability.h */,
 				5FCEDEEC160775DA00D5498B /* HomepwnerAppDelegate.h */,
 				5FCEDEED160775DA00D5498B /* HomepwnerAppDelegate.m */,
 				5FCEDEEF160775DA00D5498B /* HomepwnerViewController.h */,
@@ -165,6 +218,7 @@
 				5FCEDEEA160775DA00D5498B /* main.m in Sources */,
 				5FCEDEEE160775DA00D5498B /* HomepwnerAppDelegate.m in Sources */,
 				5FCEDEF1160775DA00D5498B /* HomepwnerViewController.m in Sources */,
+				5FCEDF14160786D500D5498B /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +294,10 @@
 		5FCEDEF8160775DA00D5498B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpotterProject/SpotterProject-Prefix.pch";
 				INFOPLIST_FILE = "SpotterProject/SpotterProject-Info.plist";
@@ -251,6 +309,10 @@
 		5FCEDEF9160775DA00D5498B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpotterProject/SpotterProject-Prefix.pch";
 				INFOPLIST_FILE = "SpotterProject/SpotterProject-Info.plist";
