@@ -22,6 +22,8 @@
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc addObserver:self selector:@selector(newStatus:) name:@"StatusUpload" object:nil];
     
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"/cardboard.png"]];
+    
     // Create location manager object
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];
     
