@@ -14,6 +14,7 @@
     IBOutlet UILabel *latitudeLabel;
     IBOutlet UILabel *longitudeLabel;
     IBOutlet UILabel *timestampLabel;
+    IBOutlet UILabel *numberOfPoints;
     IBOutlet MKMapView *lastNetwork;
     NSNumber *lastReachabilityStatus;
 }

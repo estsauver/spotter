@@ -10,7 +10,8 @@
 #import <Parse/Parse.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Reachability.h"
-
+#import <CoreTelephony/CTCarrier.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
 @interface HomepwnerViewController ()
 
 @end
@@ -73,6 +74,8 @@
     [longitudeLabel setText:[NSString stringWithFormat:@"%@", longitude]];
     [timestampLabel setText:[NSString stringWithFormat:@"%@", eventTime]];
 
+    NSNumber * totalPoints = [[PFUser currentUser] objectForKey:@"TotalPoints"];
+    [numberOfPoints setText:[NSString stringWithFormat:@"You submitted %d points", [totalPoints integerValue]]];
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lastCoordinate, 500, 500);
     [lastNetwork setRegion:region animated:YES];
      
@@ -84,7 +87,11 @@
 {
     
     NSNotificationCenter *nc  = [NSNotificationCenter defaultCenter];
+    CTTelephonyNetworkInfo *networkInfo = [[[CTTelephonyNetworkInfo alloc] init] autorelease];
+    CTCarrier *carrier = [networkInfo subscriberCellularProvider];
     
+    NSString *mnc = [carrier mobileNetworkCode];
+
     NSDate* eventDate = newLocation.timestamp;
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     if (abs(howRecent) < 1.0)
@@ -93,6 +100,10 @@
         PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
         [status setObject:point forKey:@"location"];
         [status setObject:lastReachabilityStatus forKey:@"ReachableBool"];
+        [status setObject:[carrier carrierName] forKey:@"HomeCarrier"];
+        [status setObject:mnc forKey:@"MobileNetworkCode"];
+        [status setObject:[PFUser currentUser] forKey:@"user"];
+        [[PFUser currentUser] incrementKey:@"TotalPoints"];
         [status saveEventually];
         
         NSArray *dictionaryObjects = [NSArray arrayWithObjects:[NSNumber numberWithDouble:newLocation.coordinate.latitude],
@@ -102,6 +113,7 @@
         NSArray *dictionaryKeys = [NSArray arrayWithObjects:@"latitude", @"longitude",@"timestamp", nil];
         NSDictionary *locationInfo= [NSDictionary dictionaryWithObjects:dictionaryObjects forKeys:dictionaryKeys];
         NSNotification *note = [NSNotification notificationWithName:@"StatusUpload" object:self userInfo:locationInfo];
+        [[PFUser currentUser] saveEventually];
         [[NSNotificationCenter defaultCenter] postNotification:note];
         [manager stopUpdatingLocation];
     }

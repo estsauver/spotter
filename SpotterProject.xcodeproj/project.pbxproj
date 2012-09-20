@@ -11,6 +11,8 @@
 		5F03F4FC16080D4900A04881 /* graphy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F03F4FB16080D4900A04881 /* graphy.png */; };
 		5F03F4FE16080D6A00A04881 /* elegant_grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F03F4FD16080D6A00A04881 /* elegant_grid.png */; };
 		5F03F50016080E1300A04881 /* cardboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F03F4FF16080E1300A04881 /* cardboard.png */; };
+		5F73A01E160AB8AA007F714B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F73A01D160AB8AA007F714B /* CoreTelephony.framework */; };
+		5F73A020160AD0AD007F714B /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F73A01F160AD0AD007F714B /* LaunchImage@2x.png */; };
 		5FCEDEDE160775DA00D5498B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDEDD160775DA00D5498B /* UIKit.framework */; };
 		5FCEDEE0160775DA00D5498B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDEDF160775DA00D5498B /* Foundation.framework */; };
 		5FCEDEE2160775DA00D5498B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDEE1160775DA00D5498B /* CoreGraphics.framework */; };
@@ -39,6 +41,8 @@
 		5F03F4FB16080D4900A04881 /* graphy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graphy.png; sourceTree = "<group>"; };
 		5F03F4FD16080D6A00A04881 /* elegant_grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elegant_grid.png; sourceTree = "<group>"; };
 		5F03F4FF16080E1300A04881 /* cardboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardboard.png; sourceTree = "<group>"; };
+		5F73A01D160AB8AA007F714B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		5F73A01F160AD0AD007F714B /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 		5FCEDED9160775DA00D5498B /* SpotterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCEDEDD160775DA00D5498B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5FCEDEDF160775DA00D5498B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F73A01E160AB8AA007F714B /* CoreTelephony.framework in Frameworks */,
 				5FCEDF111607851600D5498B /* CoreLocation.framework in Frameworks */,
 				5FCEDF0F1607850F00D5498B /* MapKit.framework in Frameworks */,
 				5FCEDF0D160777CF00D5498B /* SystemConfiguration.framework in Frameworks */,
@@ -97,6 +102,8 @@
 		5FCEDECE160775DA00D5498B = {
 			isa = PBXGroup;
 			children = (
+				5F73A01F160AD0AD007F714B /* LaunchImage@2x.png */,
+				5F73A01D160AB8AA007F714B /* CoreTelephony.framework */,
 				5F03F4F916080C7000A04881 /* embossed_paper.png */,
 				5F03F4FB16080D4900A04881 /* graphy.png */,
 				5F03F4FD16080D6A00A04881 /* elegant_grid.png */,
@@ -221,6 +228,7 @@
 				5F03F4FC16080D4900A04881 /* graphy.png in Resources */,
 				5F03F4FE16080D6A00A04881 /* elegant_grid.png in Resources */,
 				5F03F50016080E1300A04881 /* cardboard.png in Resources */,
+				5F73A020160AD0AD007F714B /* LaunchImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +318,7 @@
 		5FCEDEF8160775DA00D5498B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -318,6 +327,7 @@
 				GCC_PREFIX_HEADER = "SpotterProject/SpotterProject-Prefix.pch";
 				INFOPLIST_FILE = "SpotterProject/SpotterProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -325,6 +335,7 @@
 		5FCEDEF9160775DA00D5498B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Ad Hoc Release";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -333,6 +344,7 @@
 				GCC_PREFIX_HEADER = "SpotterProject/SpotterProject-Prefix.pch";
 				INFOPLIST_FILE = "SpotterProject/SpotterProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

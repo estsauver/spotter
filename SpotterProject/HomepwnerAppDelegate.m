@@ -27,6 +27,10 @@
     // Override point for customization after application launch.
     [Parse setApplicationId:@"BmK4dbnbV8tkr3Vsu3PeCyoPlxoo0e7PI2JBnKGN"
                   clientKey:@"nWa2cVgjMAapt7xPWbhjnCaWph7pWVwfTYWUXPJN"];
+    [PFUser enableAutomaticUser];
+    PFACL *defaultACL = [PFACL ACL];
+    
+    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     self.viewController = [[[HomepwnerViewController alloc] initWithNibName:@"HomepwnerViewController" bundle:nil] autorelease];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
