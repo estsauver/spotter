@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Reachability.h"
 #import <CoreTelephony/CTCarrier.h>
+#import "TestFlight.h"
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 @interface HomepwnerViewController ()
 
@@ -73,14 +74,24 @@
     [latitudeLabel setText:[NSString stringWithFormat:@"%@", latiude]];
     [longitudeLabel setText:[NSString stringWithFormat:@"%@", longitude]];
     [timestampLabel setText:[NSString stringWithFormat:@"%@", eventTime]];
-
+    
     NSNumber * totalPoints = [[PFUser currentUser] objectForKey:@"TotalPoints"];
-    [numberOfPoints setText:[NSString stringWithFormat:@"You submitted %d points", [totalPoints integerValue]]];
+    [numberOfPoints setText:[NSString stringWithFormat:@"%d network drops", [totalPoints integerValue]]];
+    
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init] ;
+    annotation.coordinate = lastCoordinate;
+    //MKPinAnnotationView *annotation = [[MKPinAnnotationView alloc] init];
+    
+    
+    
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lastCoordinate, 500, 500);
     [lastNetwork setRegion:region animated:YES];
+    [lastNetwork addAnnotation:annotation];
+
      
     
 }
+
 -(void)locationManager:(CLLocationManager *)manager
    didUpdateToLocation:(CLLocation *)newLocation
           fromLocation:(CLLocation *)oldLocation
@@ -119,6 +130,10 @@
     }
 }
 
+-(IBAction)launchFeedback:(id)sender
+{
+    [TestFlight openFeedbackView];
+}
 
 - (void)viewDidUnload
 {
@@ -128,7 +143,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

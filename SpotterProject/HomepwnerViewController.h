@@ -18,5 +18,6 @@
     IBOutlet MKMapView *lastNetwork;
     NSNumber *lastReachabilityStatus;
 }
+-(IBAction)launchFeedback:(id)sender;
 
 @end

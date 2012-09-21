@@ -11,8 +11,14 @@
 		5F03F4FC16080D4900A04881 /* graphy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F03F4FB16080D4900A04881 /* graphy.png */; };
 		5F03F4FE16080D6A00A04881 /* elegant_grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F03F4FD16080D6A00A04881 /* elegant_grid.png */; };
 		5F03F50016080E1300A04881 /* cardboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F03F4FF16080E1300A04881 /* cardboard.png */; };
+		5F11A201160D111400D511F2 /* spotterLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F11A1FF160D111400D511F2 /* spotterLogo.png */; };
+		5F11A202160D111400D511F2 /* spotterLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F11A200160D111400D511F2 /* spotterLogo@2x.png */; };
+		5F11A211160D17CC00D511F2 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F11A20D160D17CC00D511F2 /* libTestFlight.a */; };
+		5F11A212160D17CC00D511F2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5F11A20E160D17CC00D511F2 /* README.md */; };
+		5F11A213160D17CC00D511F2 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 5F11A20F160D17CC00D511F2 /* release_notes.md */; };
+		5F11A215160D180B00D511F2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F11A214160D180B00D511F2 /* libz.dylib */; };
+		5F11A219160D1F2F00D511F2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F11A218160D1F2F00D511F2 /* Default@2x.png */; };
 		5F73A01E160AB8AA007F714B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F73A01D160AB8AA007F714B /* CoreTelephony.framework */; };
-		5F73A020160AD0AD007F714B /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F73A01F160AD0AD007F714B /* LaunchImage@2x.png */; };
 		5FCEDEDE160775DA00D5498B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDEDD160775DA00D5498B /* UIKit.framework */; };
 		5FCEDEE0160775DA00D5498B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDEDF160775DA00D5498B /* Foundation.framework */; };
 		5FCEDEE2160775DA00D5498B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCEDEE1160775DA00D5498B /* CoreGraphics.framework */; };
@@ -41,8 +47,15 @@
 		5F03F4FB16080D4900A04881 /* graphy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graphy.png; sourceTree = "<group>"; };
 		5F03F4FD16080D6A00A04881 /* elegant_grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elegant_grid.png; sourceTree = "<group>"; };
 		5F03F4FF16080E1300A04881 /* cardboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardboard.png; sourceTree = "<group>"; };
+		5F11A1FF160D111400D511F2 /* spotterLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotterLogo.png; sourceTree = "<group>"; };
+		5F11A200160D111400D511F2 /* spotterLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotterLogo@2x.png"; sourceTree = "<group>"; };
+		5F11A20D160D17CC00D511F2 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		5F11A20E160D17CC00D511F2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		5F11A20F160D17CC00D511F2 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		5F11A210160D17CC00D511F2 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		5F11A214160D180B00D511F2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		5F11A218160D1F2F00D511F2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5F73A01D160AB8AA007F714B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		5F73A01F160AD0AD007F714B /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 		5FCEDED9160775DA00D5498B /* SpotterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCEDEDD160775DA00D5498B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5FCEDEDF160775DA00D5498B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F11A215160D180B00D511F2 /* libz.dylib in Frameworks */,
 				5F73A01E160AB8AA007F714B /* CoreTelephony.framework in Frameworks */,
 				5FCEDF111607851600D5498B /* CoreLocation.framework in Frameworks */,
 				5FCEDF0F1607850F00D5498B /* MapKit.framework in Frameworks */,
@@ -93,16 +107,32 @@
 				5FCEDEDE160775DA00D5498B /* UIKit.framework in Frameworks */,
 				5FCEDEE0160775DA00D5498B /* Foundation.framework in Frameworks */,
 				5FCEDEFB1607770900D5498B /* Parse.framework in Frameworks */,
+				5F11A211160D17CC00D511F2 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F11A20C160D17CC00D511F2 /* TestFlightSDK1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				5F11A20D160D17CC00D511F2 /* libTestFlight.a */,
+				5F11A20E160D17CC00D511F2 /* README.md */,
+				5F11A20F160D17CC00D511F2 /* release_notes.md */,
+				5F11A210160D17CC00D511F2 /* TestFlight.h */,
+			);
+			path = TestFlightSDK1.1;
+			sourceTree = "<group>";
+		};
 		5FCEDECE160775DA00D5498B = {
 			isa = PBXGroup;
 			children = (
-				5F73A01F160AD0AD007F714B /* LaunchImage@2x.png */,
+				5F11A218160D1F2F00D511F2 /* Default@2x.png */,
+				5F11A214160D180B00D511F2 /* libz.dylib */,
+				5F11A20C160D17CC00D511F2 /* TestFlightSDK1.1 */,
+				5F11A1FF160D111400D511F2 /* spotterLogo.png */,
+				5F11A200160D111400D511F2 /* spotterLogo@2x.png */,
 				5F73A01D160AB8AA007F714B /* CoreTelephony.framework */,
 				5F03F4F916080C7000A04881 /* embossed_paper.png */,
 				5F03F4FB16080D4900A04881 /* graphy.png */,
@@ -228,7 +258,11 @@
 				5F03F4FC16080D4900A04881 /* graphy.png in Resources */,
 				5F03F4FE16080D6A00A04881 /* elegant_grid.png in Resources */,
 				5F03F50016080E1300A04881 /* cardboard.png in Resources */,
-				5F73A020160AD0AD007F714B /* LaunchImage@2x.png in Resources */,
+				5F11A201160D111400D511F2 /* spotterLogo.png in Resources */,
+				5F11A202160D111400D511F2 /* spotterLogo@2x.png in Resources */,
+				5F11A212160D17CC00D511F2 /* README.md in Resources */,
+				5F11A213160D17CC00D511F2 /* release_notes.md in Resources */,
+				5F11A219160D1F2F00D511F2 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +360,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpotterProject/SpotterProject-Prefix.pch";
 				INFOPLIST_FILE = "SpotterProject/SpotterProject-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Downloads/TestFlightSDK1.1\"",
+					"\"$(SRCROOT)/TestFlightSDK1.1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -335,7 +374,7 @@
 		5FCEDEF9160775DA00D5498B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Ad Hoc Release";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Earl St Sauver";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -343,8 +382,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpotterProject/SpotterProject-Prefix.pch";
 				INFOPLIST_FILE = "SpotterProject/SpotterProject-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Downloads/TestFlightSDK1.1\"",
+					"\"$(SRCROOT)/TestFlightSDK1.1\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4267D9BD-8E80-4872-AE36-7CE4859343A5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
