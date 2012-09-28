@@ -25,10 +25,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [TestFlight takeOff:@"3c5a4fbc53184f637343ac6342d65ed0_MTM0MDc1MjAxMi0wOS0xOSAyMzoyODoxNy4zMjI0NzQ"];
+    
+  //  [TestFlight takeOff:@"3c5a4fbc53184f637343ac6342d65ed0_MTM0MDc1MjAxMi0wOS0xOSAyMzoyODoxNy4zMjI0NzQ"];
     
 #ifdef TESTING
-    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+  //  [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
 #endif
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
@@ -36,6 +37,7 @@
     [Parse setApplicationId:@"BmK4dbnbV8tkr3Vsu3PeCyoPlxoo0e7PI2JBnKGN"
                   clientKey:@"nWa2cVgjMAapt7xPWbhjnCaWph7pWVwfTYWUXPJN"];
     [PFUser enableAutomaticUser];
+    [[PFUser currentUser] saveInBackground];
     PFACL *defaultACL = [PFACL ACL];
     
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
@@ -53,13 +55,18 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+   // [self.viewController switchToBackgroundMode:YES];
+    
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    _viewController.executingInBackground = YES;
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    _viewController.executingInBackground=NO;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

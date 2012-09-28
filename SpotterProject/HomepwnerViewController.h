@@ -16,8 +16,9 @@
     IBOutlet UILabel *timestampLabel;
     IBOutlet UILabel *numberOfPoints;
     IBOutlet MKMapView *lastNetwork;
-    NSNumber *lastReachabilityStatus;
+    bool lastReachabilityStatus;
 }
--(IBAction)launchFeedback:(id)sender;
+@property (nonatomic, unsafe_unretained) bool executingInBackground;
 
+-(IBAction)launchFeedback:(id)sender;
 @end

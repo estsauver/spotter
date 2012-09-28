@@ -13,11 +13,11 @@
 #import <CoreTelephony/CTCarrier.h>
 #import "TestFlight.h"
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
-@interface HomepwnerViewController ()
 
-@end
 
 @implementation HomepwnerViewController
+@synthesize executingInBackground;
+
 
 - (void)viewDidLoad
 {
@@ -37,27 +37,15 @@
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
     // allocate a reachability object
-    Reachability* reach = [Reachability reachabilityWithHostname:@"www.google.com"];
-    
-    // set the blocks
-    reach.reachableBlock = ^(Reachability*reach)
-    {
-        [locationManager startUpdatingLocation];
-        lastReachabilityStatus = [NSNumber numberWithInt:1];
-    };
-    
-    reach.unreachableBlock = ^(Reachability*reach)
-    {
-        [locationManager startUpdatingLocation];
-        lastReachabilityStatus = [NSNumber numberWithInt:0];
-    };
+    [locationManager startUpdatingLocation];
     
     // start the notifier which will cause the reachability object to retain itself!
-    [reach startNotifier];
     
     [super viewDidLoad];
+    executingInBackground = YES;
   
 	// Do any additional setup after loading the view, typically from a nib.
+
 }
 
 -(void)newStatus:(NSNotification *)note
@@ -77,7 +65,7 @@
     
     NSNumber * totalPoints = [[PFUser currentUser] objectForKey:@"TotalPoints"];
     [numberOfPoints setText:[NSString stringWithFormat:@"%d network drops", [totalPoints integerValue]]];
-    
+        
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init] ;
     annotation.coordinate = lastCoordinate;
     //MKPinAnnotationView *annotation = [[MKPinAnnotationView alloc] init];
@@ -96,42 +84,46 @@
    didUpdateToLocation:(CLLocation *)newLocation
           fromLocation:(CLLocation *)oldLocation
 {
+    //if (executingInBackground){
+    Reachability *reach =[Reachability reachabilityForLocalWiFi];
+    [reach startNotifier];
+    int reachabilityStatus = [reach currentReachabilityStatus];
     
-    NSNotificationCenter *nc  = [NSNotificationCenter defaultCenter];
-    CTTelephonyNetworkInfo *networkInfo = [[[CTTelephonyNetworkInfo alloc] init] autorelease];
-    CTCarrier *carrier = [networkInfo subscriberCellularProvider];
-    
-    NSString *mnc = [carrier mobileNetworkCode];
+    if (reachabilityStatus != lastReachabilityStatus){
 
-    NSDate* eventDate = newLocation.timestamp;
-    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-    if (abs(howRecent) < 1.0)
-    {
-        PFObject * status = [PFObject objectWithClassName:@"ReachabilityStatus"];
-        PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
-        [status setObject:point forKey:@"location"];
-        [status setObject:lastReachabilityStatus forKey:@"ReachableBool"];
-        [status setObject:[carrier carrierName] forKey:@"HomeCarrier"];
-        [status setObject:mnc forKey:@"MobileNetworkCode"];
-        [status setObject:[PFUser currentUser] forKey:@"user"];
-        [[PFUser currentUser] incrementKey:@"TotalPoints"];
-        [status saveEventually];
-        
-        NSArray *dictionaryObjects = [NSArray arrayWithObjects:[NSNumber numberWithDouble:newLocation.coordinate.latitude],
-                                      [NSNumber numberWithDouble:newLocation.coordinate.longitude],
-                                      newLocation.timestamp,
-                                      nil];
-        NSArray *dictionaryKeys = [NSArray arrayWithObjects:@"latitude", @"longitude",@"timestamp", nil];
-        NSDictionary *locationInfo= [NSDictionary dictionaryWithObjects:dictionaryObjects forKeys:dictionaryKeys];
-        NSNotification *note = [NSNotification notificationWithName:@"StatusUpload" object:self userInfo:locationInfo];
-        [[PFUser currentUser] saveEventually];
-        [[NSNotificationCenter defaultCenter] postNotification:note];
-        [manager stopUpdatingLocation];
+        if (newLocation.horizontalAccuracy < 20)
+        {
+            CTTelephonyNetworkInfo *networkInfo = [[[CTTelephonyNetworkInfo alloc] init] autorelease];
+            CTCarrier *carrier = [networkInfo subscriberCellularProvider];
+            PFObject * status = [PFObject objectWithClassName:@"ReachabilityStatus"];
+            PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
+            [status setObject:point forKey:@"location"];
+            [status setObject:[NSNumber numberWithInt:lastReachabilityStatus] forKey:@"ReachabilityStatus"];/*
+            [status setObject:[carrier carrierName] forKey:@"HomeCarrier"];
+            [status setObject:[carrier mobileNetworkCode] forKey:@"MobileNetworkCode"];
+                                                                               */
+            [status setObject:[PFUser currentUser] forKey:@"user"];
+            //[[PFUser currentUser] incrementKey:@"TotalPoints"];
+            [status saveEventually];
+            if (executingInBackground){
+                NSArray *dictionaryObjects = [NSArray arrayWithObjects:[NSNumber numberWithDouble:newLocation.coordinate.latitude],
+                                              [NSNumber numberWithDouble:newLocation.coordinate.longitude],
+                                              newLocation.timestamp,
+                                              nil];
+                NSArray *dictionaryKeys = [NSArray arrayWithObjects:@"latitude", @"longitude",@"timestamp", nil];
+                NSDictionary *locationInfo= [NSDictionary dictionaryWithObjects:dictionaryObjects forKeys:dictionaryKeys];
+                NSNotification *note = [NSNotification notificationWithName:@"StatusUpload" object:self userInfo:locationInfo];
+                [[PFUser currentUser] saveEventually];
+                [[NSNotificationCenter defaultCenter] postNotification:note];
+            }
+        }
     }
+    lastReachabilityStatus = reachabilityStatus;
+    [reach stopNotifier];
 }
 
 -(IBAction)launchFeedback:(id)sender
-{
+{   
     [TestFlight openFeedbackView];
 }
 
