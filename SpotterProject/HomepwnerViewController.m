@@ -43,6 +43,8 @@
     
     [super viewDidLoad];
     executingInBackground = YES;
+    lastReachabilityStatus = [[NSNumber alloc] initWithInt:0];
+
   
 	// Do any additional setup after loading the view, typically from a nib.
 
@@ -71,7 +73,6 @@
     //MKPinAnnotationView *annotation = [[MKPinAnnotationView alloc] init];
     
     
-    
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lastCoordinate, 500, 500);
     [lastNetwork setRegion:region animated:YES];
     [lastNetwork addAnnotation:annotation];
@@ -87,7 +88,7 @@
     //if (executingInBackground){
     Reachability *reach =[Reachability reachabilityForLocalWiFi];
     [reach startNotifier];
-    int reachabilityStatus = [reach currentReachabilityStatus];
+    NSNumber *reachabilityStatus = [NSNumber numberWithInt:[reach currentReachabilityStatus]];
     
     if (reachabilityStatus != lastReachabilityStatus){
 
@@ -98,7 +99,8 @@
             PFObject * status = [PFObject objectWithClassName:@"ReachabilityStatus"];
             PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
             [status setObject:point forKey:@"location"];
-            [status setObject:[NSNumber numberWithInt:lastReachabilityStatus] forKey:@"ReachabilityStatus"];/*
+            [status setObject:[NSNumber numberWithDouble:newLocation.horizontalAccuracy] forKey:@"HorizontalAccuracy"];
+            [status setObject:[NSNumber numberWithInt:reachabilityStatus] forKey:@"ReachabilityStatus"];/*
             [status setObject:[carrier carrierName] forKey:@"HomeCarrier"];
             [status setObject:[carrier mobileNetworkCode] forKey:@"MobileNetworkCode"];
                                                                                */

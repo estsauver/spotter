@@ -1,0 +1,46 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+ <title>SpotterLogoAppStore</title>
+ <metadata id="metadata2890">image/svg+xml</metadata>
+ <defs>.fil1 {fill:black}
+    .fil0 {fill:white}.fil0 {fill:#0A0B0C}.fil1 {fill:black}
+    .fil0 {fill:white}.fil1 {fill:black}
+    .fil0 {fill:white}.fil1 {fill:black}
+    .fil0 {fill:white}.str0 {stroke:black;stroke-width:0.139357}
+    .fil0 {fill:none}
+    .fil1 {fill:black}.str0 {stroke:black;stroke-width:0.139357}
+    .fil0 {fill:none}
+    .fil1 {fill:black}
+  <linearGradient y2="1" x2="1" y1="0" x1="0" id="svg_1">
+   <stop stop-color="#272c40" offset="0"/>
+   <stop stop-color="#8d9fe5" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="1" x2="1" y1="0" x1="0" id="svg_2">
+   <stop stop-color="#272c40" offset="0"/>
+   <stop stop-color="#8d9fe5" offset="1"/>
+  </linearGradient>
+  <radialGradient r="1" cy="0.5" cx="0.5" id="svg_3">
+   <stop stop-color="#252f40" offset="0"/>
+   <stop stop-color="#6f8cbf" offset="1"/>
+  </radialGradient>
+  <radialGradient r="1" cy="0.5" cx="0.5" id="svg_4">
+   <stop stop-color="#252f40" offset="0"/>
+   <stop stop-color="#94bbff" offset="1"/>
+  </radialGradient></defs>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_8">
+   <rect id="svg_5" height="513.933002" width="512.789496" y="-1.063887" x="-0.247089" stroke-linecap="null" stroke-linejoin="null" fill="#8c7035"/>
+   <rect id="svg_6" height="2.181767" width="5.377418" y="32.48799" x="88.468942" stroke-linecap="null" stroke-linejoin="null" fill="#8c7035"/>
+   <g id="svg_7">
+    <path fill="#252f40" id="path2865" d="m306.788635,108.921745l69.785767,-32.356224l15.036316,40.263947l-74.79892,18.935349l-10.023163,-26.843224l0,0.000153z"/>
+    <path fill="#252f40" id="path2863" d="m256.721863,168.700577c10.620636,0 19.233826,-8.394867 19.233826,-18.744904c0,-0.84906 -0.060272,-1.683777 -0.172638,-2.50264l33.517975,-11.89093l-8.771088,-23.48658l-110.159851,39.08007l8.771011,23.486557l41.328171,-14.661713c3.411072,5.240021 9.415817,8.720139 16.252594,8.720139z"/>
+    <path fill="#252f40" id="path2861" d="m203.302521,293.933502l20.655273,7.326935l23.789505,-63.702942l0,60.230865l21.980606,0l0,-60.230865l23.787903,63.702942l20.655212,-7.326935l-45.107391,-120.788284l-10.325928,3.662659l-10.327682,-3.662659l-45.107315,120.788284l-0.000183,0z"/>
+    <path fill="#252f40" id="path2859" d="m204.238724,301.865082l13.77124,4.886139l-37.58992,100.65799l-13.769638,-4.886139l37.588318,-100.65799z"/>
+    <path fill="#252f40" id="path2857" d="m299.465057,306.751221l13.769562,-4.886139l37.589874,100.65799l-13.771088,4.886139l-37.588348,-100.65799z"/>
+    <path fill="#252f40" id="path2855" d="m251.410629,304.50885l14.653702,0l0,103.990662l-14.653702,0l0,-103.990662z"/>
+    <path fill="#252f40" id="path2853" d="m381.579346,69.089394l8.137665,0.914055l16.289978,43.618698l-5.631897,5.79705l-18.795807,-50.329803l0.000061,0z"/>
+    <path fill="#252f40" id="path3841" d="m120.589928,203.440735c-10.643448,-7.623657 -13.149208,-14.333191 -10.023117,-26.841583l4.695732,2.134415l68.849472,-24.424408c2.399933,6.711136 4.96109,13.47464 7.517365,20.131836l-68.849548,24.423172l-2.189903,4.576675l0,-0.000107z"/>
+   </g>
+  </g>
+ </g>
+</svg>
