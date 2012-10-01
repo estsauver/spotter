@@ -97,6 +97,7 @@
             CTTelephonyNetworkInfo *networkInfo = [[[CTTelephonyNetworkInfo alloc] init] autorelease];
             CTCarrier *carrier = [networkInfo subscriberCellularProvider];
             PFObject * status = [PFObject objectWithClassName:@"ReachabilityStatus"];
+            [status setObject:[NSNumber numberWithInt:1] forKey:@"testing"];
             PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
             [status setObject:point forKey:@"location"];
             [status setObject:[NSNumber numberWithDouble:newLocation.horizontalAccuracy] forKey:@"HorizontalAccuracy"];

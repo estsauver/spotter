@@ -11,7 +11,7 @@
 #import "HomepwnerViewController.h"
 
 #import <Parse/Parse.h>
-#define TESTING 1
+#define TESTING 0
 
 
 @implementation HomepwnerAppDelegate
@@ -26,10 +26,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-  //  [TestFlight takeOff:@"3c5a4fbc53184f637343ac6342d65ed0_MTM0MDc1MjAxMi0wOS0xOSAyMzoyODoxNy4zMjI0NzQ"];
+    [TestFlight takeOff:@"3c5a4fbc53184f637343ac6342d65ed0_MTM0MDc1MjAxMi0wOS0xOSAyMzoyODoxNy4zMjI0NzQ"];
     
 #ifdef TESTING
-  //  [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
 #endif
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
